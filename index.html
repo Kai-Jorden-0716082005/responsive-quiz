@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banners Page</title>
+    <style>
+        * {
+            user-select: none;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .subject-banner,
+        .chapters-banner,
+        .levels-banner {
+            width :70vw;
+            margin-bottom: 10px;
+            cursor:pointer;
+        }
+
+        .subject-contents,
+        .chapters-contents {
+            cursor:pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 1.5em;
+            text-decoration: none;
+            /* Remove underline */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .levels-contents {
+            
+            cursor:pointer;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            font-size: 1.5em;
+            text-decoration: none;
+            /* Remove underline */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        a{
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+            cursor:pointer;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .subject-contents:hover,
+        .chapters-contents:hover,
+        .levels-contents:hover {
+            cursor:pointer;
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .levels-contents:nth-child(1) {
+            display: none  !important;
+        }
+        .subject-contents:nth-child(1) {
+            display: none  !important;
+        }
+        .levels-contents:nth-child(2), .botany>div {
+            background-color: #2196F3;
+        }
+
+        .levels-contents:nth-child(3), .zoology>div {
+            background-color: #FF9800;
+        }
+
+        .levels-contents:nth-child(4), .physics>div {
+            background-color: #F44336;
+        }
+        .subject-contents:nth-child(2) {
+            background-color: #2196F3;
+        }
+
+        .subject-contents:nth-child(3) {
+            background-color: #FF9800;
+        }
+
+        .subject-contents:nth-child(4) {
+            background-color: #F44336;
+        }
+        .chapters-banner>div{
+            display: none;
+        }
+        .levels-banner{
+            display: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+    <div id = "main" >
+        <div class="subject-banner">
+            <!-- subject contents will be generated here -->
+        </div>
+        <div class="chapters-banner">
+            <!-- chapters contents will be generated here -->
+        </div>
+        <div class="levels-banner">
+            <!-- levels contents will be generated here -->
+        </div>
+    </div>
+
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        $.ajaxSetup({
+            async: false
+        });
+        var data;
+        $.getJSON("Data/link.json", function (jsonData) {
+            data = jsonData;
+            $.each(data.subjects, function (index, subject) {
+                var subjectId = subject.replace(/ /g, "_").toLowerCase();
+                $("<div>").addClass("subject-contents").attr("id", subjectId).text(subject.charAt(0).toUpperCase() + subject.substr(1).toLowerCase()).appendTo(".subject-banner");
+            });
+            $.each(data.subjects, function (index, subject) {
+                var subjectId = subject.replace(/ /g, "_").toLowerCase();
+                var chaptersDiv = $("<div>").addClass(subjectId).appendTo(".chapters-banner");
+                    $.each(data[subjectId], function (index, chapter) {
+                        var chapterId = chapter.replace(/ /g, "_").toLowerCase();
+                        $("<div>").addClass("chapters-contents").attr("id", chapterId).text(chapter).appendTo(chaptersDiv);
+                    });
+            });
+            $.each(data.levels, function (index, level) {
+                var levelId = level.replace(/ /g, "_").toLowerCase();
+                $("<div>").addClass("levels-contents").attr("id", levelId).text(level).appendTo(".levels-banner");
+            });
+        })
+        .fail(function (jqxhr, textStatus, error) {
+            console.error("Error loading link.json:", textStatus, error);
+        });
+    </script>
+    <script>
+        let clickedDivId = clickedDivId2 = clickedDivId3 ='';
+         function handleClick(event) {
+                // Get the id of the clicked div
+                clickedDivId = event.target.id;
+                $(".subject-contents").toggle(100);
+                $("."+clickedDivId).toggle(150); 
+                
+            }
+
+            // Add event listeners to all divs with the class 'clickable-div'
+            document.querySelectorAll('.subject-contents').forEach(div => {
+                div.addEventListener('click', handleClick);
+            });
+
+            function handleClick2(event) {
+                    // Get the id of the clicked div
+                    clickedDivId2 =  event.target.id;
+                    clickedDivId4 = clickedDivId2;  
+                    clickedDivId2 = "." + clickedDivId;
+                    $(".chapters-contents").toggle(100);
+                    $('.levels-banner').toggle(150);
+                    document.querySelectorAll('.levels-contents').forEach(element => {
+                    clickedDivId3 = element.id;
+                    var currentInnerHtml = element.innerHTML;
+                    element.innerHTML = '<a href="quiz.html?x=' + clickedDivId + '_' + clickedDivId4 + '_' + clickedDivId3 + '.json' + '">' + currentInnerHtml + '</a>';
+                });
+                }
+
+                // Add event listeners to all divs with the class 'clickable-div'
+                document.querySelectorAll('.chapters-contents').forEach(div => {
+                    div.addEventListener('click', handleClick2);
+                });
+            
+
+    </script>
+</body>
+
+</html>

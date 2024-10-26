@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        body,
+        html {
+            scrollbar-width: none;
+            min-height: 100vh;
+            margin: 0;
+            padding: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1e1e1e;
+            color: #dcdcdc;
+        }
+
+        #quiz-container {
+
+            width: 80vw;
+            min-height: 80vh;
+            height: max-content;
+            min-width: min-content;
+            background-color: #2d2d2d;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            display: grid;
+            grid-template-rows: min-content max-content max-content;
+            font-size: 1.2rem;
+            justify-content: space-evenly;
+        }
+
+        .question {
+            margin: 20px 0;
+            font-size: 1.5rem;
+            color: #9cdcfe;
+        }
+
+        .options-container {
+            margin: 20px 0;
+        }
+
+        .option-label {
+            background-color: #333;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.2s ease;
+        }
+
+        .option-label:hover {
+            background-color: #444;
+        }
+
+        .indicator {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+            font-size: 1rem;
+            color: #fff;
+            margin-left: 10px;
+        }
+
+        .correct {
+            background-color: green;
+        }
+
+        .incorrect {
+            background-color: red;
+        }
+
+        .quiz-complete {
+            background-color: #007acc;
+        }
+
+        #indicator-container {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 900;
+        }
+
+        #progress-popup,
+        #answer-key-popup {
+            z-index: 1001;
+            display: none;
+            position: fixed;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60vw;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            padding: 20px;
+            font-size: 1rem;
+            color: #dcdcdc;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        #progress-table,
+        #answer-key-table {
+            width: 100%;
+            border-collapse: collapse;
+            color: #dcdcdc;
+        }
+
+        #progress-table th,
+        #progress-table td,
+        #answer-key-table th,
+        #answer-key-table td {
+            border: 1px solid #3e3e3e;
+            padding: 8px;
+        }
+
+        #progress-table th,
+        #answer-key-table th {
+            background-color: #333;
+        }
+
+        #progress-summary {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        #close-popup,
+        #close-answer-key {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #444;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .green-text {
+            color: #228b22;
+        }
+
+        .red-text {
+            color: #b22222;
+        }
+
+        .left-align {
+            text-align: left;
+        }
+
+        button {
+            background-color: #007acc;
+            border: none;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        button:hover {
+            background-color: #005f99;
+        }
+
+        .option-indent {
+            margin-left: 20px;
+        }
+
+        .option-label {
+            display: flex;
+            /* Use flex to keep the index and text in line */
+            align-items: flex-start;
+            /* Align items to the start */
+        }
+
+        .option-index {
+            margin-right: 10px;
+            /* Space between index and text */
+            white-space: nowrap;
+            /* Prevent the index from breaking onto a new line */
+        }
+
+        .option-text {
+            font-weight: bold;
+            white-space: pre-wrap;
+            /* Allow wrapping for the option text */
+            flex: 1;
+            /* Allow the text to grow and take up available space */
+        }
+
+        .green-cell {
+            background-color: #c7f9cc;
+            /* Light green for correct */
+            color: black;
+            font-weight: bold;
+        }
+
+        .red-cell {
+            font-weight: bold;
+            color: black;
+            background-color: #f8d7da;
+            /* Light red for incorrect */
+        }
+
+        #indicator-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* Distribute space evenly */
+            width: calc(100% - 20px);
+            padding: 10px;
+        }
+
+        #timer {
+            background-color: rgba(45, 45, 45, 0.7);
+            /* Semi-transparent background */
+            color: #dcdcdc;
+            /* Timer text color */
+            padding: 5px 10px ;
+            /* Padding around the text */
+            border-radius: 5px;
+            /* Rounded corners */
+            font-size: 1.2rem;
+            /* Font size */
+            margin-left: auto;
+            /* Push the timer to the far right */
+            text-align: right;
+
+        }
+
+        #popupAd {
+            position: fixed;
+            right: 1%;
+            bottom: 1%;
+            width: 400px;
+            /* Adjust the width as needed */
+            height: auto;
+            /* Maintain aspect ratio */
+            border: 2px solid #000;
+            /* Optional styling */
+            z-index: 1000;
+            /* Ensure it appears above other content */
+        }
+        .hed>div {
+            display: none;
+    }
+        /* Styling for the dark overlay */
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0);
+            /* Semi-transparent black background */
+            z-index: 999;
+            /* Ensure it covers the entire page but behind the popup image */
+        }
+        @media only screen and (max-width: 680px) {
+            #indicator-container {
+                flex-direction: column;
+                text-align: center;
+
+            }
+            #indicator-container>div{
+            grid-template-columns: 33% auto 33%; 
+            justify-items: center;
+            margin-bottom: 20px;
+            }
+            #timer {
+                margin: auto;
+                text-align: center;
+            }
+            #quiz-container{
+                justify-content: space-between;
+            }
+            .hed>div {
+        padding: 5px;
+        border-radius: 2px;
+        background-color: darkred;
+        margin-top: 10px;
+        text-align: center;
+        display: block;
+    }
+    #progress-popup,
+    #answer-key-popup {
+        width: 90vw;
+        max-height: 80vh;
+    }
+        }
+    </style>
+    
+</head>
+
+<body>
+
+<div style="
+        position: absolute;
+        z-index: 10000;
+        top: 0px;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    " class="hed">
+
+    <div id="b" onclick=" document.getElementById('b').style.display='none'; document.getElementById('a').style.display='block'; startTest();">Start</div>
+    <div id="a" onclick="endTest()" style="display: none;">End</div>
+    <div onclick="downloadProgressData()">Print</div>
+    <div onclick="if (answerKeyPopupVisible) {
+                    closeAnswerKey();
+                } else {
+                    showAnswerKey();
+                }">Ans</div>
+    <div onclick="if (progressPopupVisible) {
+                    closePopup();
+                } else {
+                    showProgress();
+                }">Check</div>
+    <div onclick="if (currentQuestion > 0) {
+                        userAnswers[currentQuestion] = null; // Erase selected option
+                        currentQuestion--;
+                        displayQuestion();
+                    
+                }">Back</div>
+</div>
+    <div id="quiz-container" style="display: flex; flex-direction: column; ">
+        <div id="w"></div>
+        <div id="question-container" class="question"
+            style="display:flex;  flex-direction: column;"></div>
+        <div class="options-container" id="options-container" style="height: max-content;"></div>
+    </div>
+
+
+    <div id="progress-popup">
+        <div id="progress-summary"></div>
+        <table id="progress-table">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Selected Option</th>
+                    <th>Correct Option</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="answer-key-popup">
+        <table id="answer-key-table">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Questions (with Options)</th>
+                    <th>Correct Answer</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script>
+        
+        function filename() {
+                const urlParams = new URLSearchParams(window.location.search);
+                let num = urlParams.get('x');
+                return num;
+            }
+        let timerInterval;
+        let startTime;
+        let elapsedTime = 0; // In milliseconds
+        let isRunning = false; // State to track timer status
+        let indicator = 'indicator quiz-complete';
+        let indicatorText = 'indicator-text';
+        let indicatoritext = 'Quiz In Progress';
+        function updateTimer() {
+            elapsedTime = Date.now() - startTime; // Calculate elapsed time
+            const totalSeconds = Math.floor(elapsedTime / 1000);
+            const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+            const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+            const seconds = String(totalSeconds % 60).padStart(2, '0');
+            const milliseconds = String(elapsedTime % 1000).padStart(3, '0').substring(0, 2); // Show two digits
+
+            document.getElementById("time-elapsed").textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
+            console.log("ut");
+        }
+        function startTimer() {
+            if (!isRunning) { // Start the timer only if it's not already running
+                startTime = Date.now() - elapsedTime; // Adjust start time to continue from where it left off
+                timerInterval = setInterval(updateTimer, 10); // Update every 10 ms
+                isRunning = true; // Update the running state
+            }
+            console.log("st");
+        }
+        function pauseTimer() {
+            clearInterval(timerInterval); // Stop the timer
+            isRunning = false; // Update the running state
+        }
+        function resumeTimer() {
+            startTimer(); // Call startTimer which will check if it's already running
+        }
+        document.addEventListener("keydown", (event) => {
+            switch (event.key) {
+                case "j": // Start timer
+                    startTimer();
+                    break;
+                case "k": // Pause timer
+                    pauseTimer();
+                    break;
+                case "l": // Resume timer
+                    resumeTimer();
+                    break;
+            }
+        });
+        let questions = [];
+        let answers = [];
+        let userAnswers = [];
+        let currentQuestion = 0;
+        let isTransitioning = false;
+        let progressPopupVisible = false;
+        let answerKeyPopupVisible = false;
+        let overlay = false;
+        function loadQuiz() {
+                const quizFile = "Data/" + filename(); // Replace with your quiz loading logic
+
+                fetch(quizFile)
+                    .then(response => response.json())
+                    .then(data => {
+                        questions = data.questions.map(question => {
+                            return {
+                                text: question.question,
+                                options: question.options,
+                                answer: question.answer,
+                                images: question.images,
+                                tables: question.tables
+                            };
+                        });
+                        answers = data.questions.map(question => question.answer);
+                        displayQuestion();
+                    });
+                    console.log("lq");
+            }
+        function displayQuestion() {
+                const questionContainer = document.getElementById("question-container");
+                const optionsContainer = document.getElementById("options-container");
+                const lay = document.getElementById("lay");
+                questionContainer.innerHTML = "";
+                optionsContainer.innerHTML = "";
+
+                if (currentQuestion < questions.length) {
+                    const questionText = questions[currentQuestion].text;
+                    const options = questions[currentQuestion].options;
+                    b = '';
+                    
+                    let c = `<div id="indicator-container" style="height: min - content;"><div style="display: grid; grid-template-columns: auto auto auto auto; align-items: center;">
+                            <span>Question Status:</span>
+                            <div id="indicator" class="${indicator}"></div>
+                            <span>&nbsp;</span>
+                            <span id="indicator-text">${indicatoritext}</span>
+                            </div >
+                                            <div id="timer">Time Elapsed: <span id="time-elapsed">00:00:00:00</span></div>
+                            </div > `;
+                    if (overlay) {
+                        b = 'block';
+                        document.getElementById("w").innerHTML = '';
+                    }
+                    else {
+                        b = 'none';
+                        document.getElementById("w").innerHTML = c;
+                        c = '';
+                    }
+                    if (!overlay){
+                        
+                    }
+                    
+                    questionContainer.innerHTML = `<strong>${currentQuestion + 1}. ${questionText}</strong><br><br><div id = "overlay" style = "display: ${b}">${c}<strong>${currentQuestion + 1}. ${questionText}</strong><br><br><div id="lay"></div></div>`; // Display question ID as index + 1
+                    if (questions[currentQuestion].images.length > 0) {
+                        questionContainer.innerHTML = `<strong>${currentQuestion + 1}. ${questionText}</strong><br><br><div id = "overlay" style = "display: ${b}">${c}<strong>${currentQuestion + 1}. ${questionText}</strong><br><br><img id = "popupAd" src="Data/${questions[currentQuestion].images[0]}" ><div id="lay"></div></div>`;
+                    }
+                    if (questions[currentQuestion].images.length > 0) {
+                        questionContainer.innerHTML += `<img id = "hide" src="Data/${questions[currentQuestion].images[0]}" style="max-width: 60%; display: block; margin: 0 auto;">`;
+                    }
+
+                    options.forEach((option, index) => {
+                        const optionLabel = document.createElement("div");
+                        optionLabel.className = "option-label";
+                        optionLabel.textContent = option;
+                        optionLabel.onclick = () => checkAnswer(index + 1); // Match option numbers
+                        optionsContainer.appendChild(optionLabel);
+                    });
+                    
+                    options.forEach((option, index) => {
+                        const optionLabel = document.createElement("div");
+                        optionLabel.className = "options-label";
+                        optionLabel.textContent = option;
+                        document.getElementById('lay').appendChild(optionLabel);
+                    });
+                    
+                } else {
+                    indicator = "indicator quiz-complete";
+                    indicatoritext = "Quiz Complete";
+                    let n = 1;
+                    while(n<2){
+                        displayQuestion();
+                    }
+                }
+                console.log("dq");
+            }    
+        function checkAnswer(selectedOption) {
+            if (isTransitioning) return;
+            isTransitioning = true;
+
+            userAnswers[currentQuestion] = selectedOption;
+            // Disable options to prevent multiple clicks
+            const options = document.querySelectorAll('.option-label');
+            options.forEach(option => option.style.pointerEvents = 'none');
+
+            if (selectedOption == answers[currentQuestion]) {
+                indicatoritext = "Correct";
+                indicator = "indicator correct";
+            } else {
+                indicatoritext = "Incorrect";
+                indicator = "indicator incorrect";
+            }
+
+                if (currentQuestion < questions.length - 1) {
+                    
+                    currentQuestion++;
+                    displayQuestion();
+                    
+                } else {
+                    indicatoritext = "Quiz Complete";
+                    indicator = "indicator quiz-complete";
+                    displayQuestion();
+                }
+                isTransitioning = false;
+                
+        }
+        function moveIndicatorContainer() {
+            // Get the indicator-container element
+            const indicatorContainer = document.getElementById('indicator-container');
+
+            // Get the overlay element
+            const overlayd = document.getElementById('overlay');
+            // Move the indicator-container inside the overlay
+            if (indicatorContainer && overlayd) {
+                overlayd.insertBefore(indicatorContainer, overlayd.firstChild);
+            } else {
+                console.error('Either indicator-container or overlay element not found.');
+            }
+        }
+        function moveIndicatorContainerToQuizContainer() {
+            // Get the indicator-container element
+            const indicatorContainer = document.getElementById('indicator-container');
+
+            // Get the quiz-container element
+            const quizContainer = document.getElementById('quiz-container');
+
+            // Move the indicator-container back to the quiz-container as the first element
+            if (indicatorContainer && quizContainer) {
+                quizContainer.insertBefore(indicatorContainer, quizContainer.firstChild);
+            } else {
+                console.error('Either indicator-container or quiz-container element not found.');
+            }
+        }
+        function nextQuestion() {
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                displayQuestion();
+            }
+        }
+        function showProgress() {
+            const progressPopup = document.getElementById("progress-popup");
+            const tbody = document.querySelector("#progress-table tbody");
+            tbody.innerHTML = "";
+
+            userAnswers.forEach((answer, index) => {
+                const tr = document.createElement("tr");
+
+                // Determine if the answer is correct and set the class accordingly
+                const isCorrect = answer == answers[index];
+
+                tr.innerHTML = `
+            <td class="${isCorrect ? 'green-cell' : 'red-cell'}">${index + 1}.</td>
+            <td class="${isCorrect ? 'green-cell' : 'red-cell'}">${answer || 'N/A'}</td>
+            <td class="${isCorrect ? 'green-cell' : 'red-cell'}">${answers[index]}</td>
+        `;
+
+                tbody.appendChild(tr);
+            });
+
+            const correctCount = userAnswers.filter((a, i) => a == answers[i]).length;
+            const incorrectCount = questions.length - correctCount;
+
+            document.getElementById('progress-summary').textContent = `Correct: ${correctCount} | Incorrect: ${incorrectCount}`;
+            progressPopup.style.display = "block";
+            progressPopupVisible = true;
+        }
+        function showAnswerKey() {
+        const answerKeyPopup = document.getElementById('answer-key-popup');
+        const tbody = answerKeyPopup.querySelector('tbody');
+        tbody.innerHTML = '';
+
+        questions.forEach((question, index) => {
+            // Remove the leading number (e.g., '1.') from the question using regex
+            const questionText = question.text.replace(/^\d+\.\s*/, '');
+
+            const trQuestion = document.createElement("tr");
+            let a = '';
+            if (questions[index].images.length > 0) {
+                a = `<img onerror="this.style.display='none'" src="Data/${questions[index].images[0]}" style="max-width: 50%; display: inherit; margin: 0 auto;">`;
+            }
+            
+            trQuestion.innerHTML = `<th>${index + 1}.</th><td class="left-align"><strong>${questionText}</strong>${a}</td><th>${answers[index]}</th>`;
+            tbody.appendChild(trQuestion);
+
+            question.options.forEach((option, optIndex) => {
+                const tr = document.createElement("tr");
+                const isCorrect = optIndex + 1 == answers[index];
+
+                tr.innerHTML = `
+                <td></td>
+                <td class="option-label">
+                    <span class="option-index">${optIndex + 1}.</span>
+                    <span class="option-text ${isCorrect ? 'green-text' : 'white-text'}">${option}</span>
+                </td>
+                <td></td>
+            `;
+                tbody.appendChild(tr);
+            });
+        });
+
+        answerKeyPopup.style.display = "block";
+        answerKeyPopupVisible = true;
+    }        
+        function closePopup() {
+            document.getElementById('progress-popup').style.display = "none";
+            progressPopupVisible = false;
+        }
+        function closeAnswerKey() {
+            document.getElementById('answer-key-popup').style.display = "none";
+            answerKeyPopupVisible = false;
+        }
+        document.addEventListener("keydown", (event) => {
+            const key = event.key;
+
+            if (key === "1") checkAnswer(1);
+            else if (key === "2") checkAnswer(2);
+            else if (key === "3") checkAnswer(3);
+            else if (key === "4") checkAnswer(4);
+            else if (key === "Backspace") {
+                
+                    if (currentQuestion > 0) {
+                        userAnswers[currentQuestion] = null; // Erase selected option
+                        currentQuestion--;
+                        displayQuestion();
+                    
+                }
+            } else if (key === "Enter") {
+                if (progressPopupVisible) {
+                    closePopup();
+                } else {
+                    showProgress();
+                }
+            } else if (key === "Escape") {
+                closePopup();
+                closeAnswerKey();
+            } else if (key === "a") {
+                if (answerKeyPopupVisible) {
+                    closeAnswerKey();
+                } else {
+                    showAnswerKey();
+                }
+            }
+        });
+        function padCenter(str, length) {
+            const totalPadding = length - str.length;
+            const leftPadding = Math.floor(totalPadding / 2);
+            const rightPadding = totalPadding - leftPadding;
+
+            return ' '.repeat(leftPadding) + str + ' '.repeat(rightPadding);
+        }
+        let testStartTime = null;
+        let testEndTime = null;
+        function formatDateTime(date) {
+            const hours = String(date.getHours()).padStart(2, '0');
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            const seconds = String(date.getSeconds()).padStart(2, '0');
+            const milliseconds = String(date.getMilliseconds()).padStart(3, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+            const year = date.getFullYear();
+            return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}:${milliseconds}`;
+        }
+        let quizStarted = false; // Flag to track if the quiz has started
+        function startTest() {
+            
+            if (!quizStarted) {
+                quizStarted = true; // Set the flag to true
+                testStartTime = new Date();
+                const startTimeFormatted = formatDateTime(testStartTime);
+                alert(`Test started at: ${startTimeFormatted}\nPress 'e' to end the test.`);
+                startTimer(); // Start the timer here
+                loadQuiz();   // Load the quiz questions here
+            }
+        }
+        function endTest() {
+            testEndTime = new Date();
+            const endTimeFormatted = formatDateTime(testEndTime);
+            pauseTimer(); // Stop the timer
+            alert(`Test ended at: ${endTimeFormatted}\nYou can now download the progress.`);
+        }
+        function downloadProgressData() {
+            // Get the time elapsed, correct, and incorrect answer counts
+            const timeElapsed = document.getElementById('time-elapsed').textContent;
+            const correctCount = userAnswers.filter((a, i) => a == answers[i]).length;
+            const incorrectCount = userAnswers.length - correctCount;
+
+            // Construct the header with start time, end time, time elapsed, correct, and incorrect
+            let data = `Test Started: ${testStartTime ? formatDateTime(testStartTime) : 'N/A'}\n`;
+            data += `Test Ended: ${testEndTime ? formatDateTime(testEndTime) : 'N/A'}\n\n`;
+            data += `Time Elapsed: ${timeElapsed}\n\n`;
+            data += `Correct Answers: ${correctCount}\n`;
+            data += `Incorrect Answers: ${incorrectCount}\n\n`;
+            num = filename();
+            data += `Subject_Chapter_Level: ${num}\n\n`
+
+            // Define column widths
+            const noColumnWidth = 5;
+            const selectedOptionWidth = 16;
+            const correctOptionWidth = 16;
+
+            // Construct the table header
+            data += "+------+-----------------+-----------------+\n";
+            data += "|  No. | Selected Option | Correct Option  |\n";
+            data += "+------+-----------------+-----------------+\n";
+
+            // Fill in the userAnswers and correct answers
+            userAnswers.forEach((answer, index) => {
+                const correctAnswer = answers[index];
+                const rowNumber = padCenter((index + 1).toString(), noColumnWidth);
+                const selectedOption = padCenter(answer ? answer.toString() : 'N/A', selectedOptionWidth);
+                const correctOption = padCenter(correctAnswer.toString(), correctOptionWidth);
+                data += `| ${rowNumber}| ${selectedOption}| ${correctOption}|\n`;
+            });
+
+            data += "+------+-----------------+-----------------+\n";
+
+            // Create a blob from the data
+            const blob = new Blob([data], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+
+            // Create a link element for downloading
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'progress_data.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 's' && !testStartTime) {
+                startTest(); // Start the test when 's' is pressed
+            }
+            if (event.key === 'e' && testStartTime && !testEndTime) {
+                endTest(); // End the test when 'e' is pressed
+            }
+            if (event.key === 'p') {
+                downloadProgressData(); // Download progress data when 'p' is pressed
+            }
+        });
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'i' || event.key === 'I') { // Check if the pressed key is "I"
+                
+                // Toggle the display state of both the image and the overlay
+                if (overlay) {
+                    overlay = false;  // Hide the overlay
+                    
+                } else {
+                    overlay = true;  // Show the overlay
+                    
+                }
+                displayQuestion();
+            }
+        });
+    </script>
+    <script>
+        // Define a function to alert key usage information
+        function alertKeyBindings() {
+            const keyBindings = [
+                // { key: "j", action: "Start Timer" },
+                // { key: "k", action: "Pause Timer" },
+                // { key: "l", action: "Resume Timer" },
+                { key: "s", action: "Start the Test" },
+                { key: "e", action: "End the Test" },
+                { key: "i", action: "Show/Hide Image" },
+                { key: "1,2,3,4", action: "Select Options" },
+                { key: "Backspace", action: "Go to Previous Question" },
+                { key: "Enter", action: "Show/Close Progress Popup" },
+                { key: "Escape", action: "Close Popups" },
+                { key: "p", action: "Download Progress Data" }
+            ];
+
+            let message = "Key Bindings:\n";
+            keyBindings.forEach(binding => {
+                message += `Key: ${binding.key.toUpperCase()} - Action: ${binding.action}\n`;
+            });
+
+            alert(message); // Show an alert with all key bindings
+        }
+        // Call the function on window load to show the alert with key bindings
+        window.onload = function () {
+            alertKeyBindings();
+        };
+    </script>
+
+</body>
+
+</html>
