@@ -1,0 +1,1203 @@
+{
+    "subject": "botany",
+    "chapter": "cell_cycle_and_cell_division",
+    "level": "topicwise",
+    "questions": [
+        {
+            "id": 1,
+            "question": "The sequence of events in which a cell duplicates its genome, synthesises the other constituents of the cell and eventually divides into two daughter cells is called",
+            "options": [
+                "(1) Cell Division",
+                "(2) Cell cycle",
+                "(3) Karyokinesis",
+                "(4) Cytokynesis"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 2,
+            "question": "A typical eukaryotic cell cycle is illustrated by",
+            "options": [
+                "(1) Yeast",
+                "(2) Bacteria",
+                "(3) Human cells in culture",
+                "(4) Both (1) and (3)"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 3,
+            "question": "In the 24 hour average duration of cell cycle of a human cell, cell division proper lasts for about",
+            "options": [
+                "(1) 23 hours",
+                "(2) An hour",
+                "(3) Half an hour",
+                "(4) 90 minutes"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 4,
+            "question": "Of the total duration of cell cycle, the interphase lasts for more than",
+            "options": [
+                "(1) 95%",
+                "(2) 5%",
+                "(3) 90%",
+                "(4) 80%"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 5,
+            "question": "Cell division is",
+            "options": [
+                "(1) A process that does not involve co-ordination of various cellular elements",
+                "(2) A process that can occur at any time",
+                "(3) A highly co-ordinated process",
+                "(4) Never precise"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 6,
+            "question": "Astral rays arise from",
+            "options": [
+                "(1) Centriole",
+                "(2) Nucleus",
+                "(3) Chromatid",
+                "(4) Centromere"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 7,
+            "question": "Most of the organelle duplication occurs during",
+            "options": [
+                "(1) M-phase",
+                "(2) Interphase",
+                "(3) Interkinesis",
+                "(4) Cytokinesis"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 8,
+            "question": "Which among the following is correct?",
+            "options": [
+                "(1) DNA content become double during G1-phase",
+                "(2) Duration of interphase is short as compared to M-phase",
+                "(3) G2-phase follows mitotic phase",
+                "(4) DNA-replication occurs in S-phase"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 9,
+            "question": "Which of the following does not occur during cell division?",
+            "options": [
+                "(1) DNA replication",
+                "(2) Cell growth",
+                "(3) Increase in cytoplasm of daughter cell",
+                "(4) Division of cell organelles"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 10,
+            "question": "How many times does DNA replicate?",
+            "options": [
+                "(1) Twice in each cell cycle",
+                "(2) Only once in each cell cycle",
+                "(3) Once in mitotic cycle, once in meiotic-I (reductional division) and once in meiotic-II (equational division)",
+                "(4) None of the above"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 11,
+            "question": "Which phase corresponds to the interval between mitosis and initiation of DNA replication?",
+            "options": [
+                "(1) Gap 1/G1 phase",
+                "(2) Gap 2/G2 phase",
+                "(3) Synthesis/ S phase",
+                "(4) M phase"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 12,
+            "question": "G1, S, and G2 are stages of",
+            "options": [
+                "(1) Interphase",
+                "(2) Prophase",
+                "(3) Metaphase",
+                "(4) Anaphase"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 13,
+            "question": "\"Post-mitotic phase\" of cell in which active synthesis of RNA and proteins takes place is",
+            "options": [
+                "(1) S-phase",
+                "(2) Amitotic phase",
+                "(3) G2-phase",
+                "(4) G1-phase"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 14,
+            "question": "If the initial amount of DNA is denoted as 2C then the amount of DNA after S-phase will be:",
+            "options": [
+                "(1) 4C",
+                "(2) 6C",
+                "(3) C",
+                "(4) 2C"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 15,
+            "question": "Nucleolus, Golgi apparatus, ER reform in",
+            "options": [
+                "(1) Anaphase",
+                "(2) Prophase",
+                "(3) Telophase",
+                "(4) Metaphase"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 16,
+            "question": "A cell is bound to divide, if it has entered",
+            "options": [
+                "(1) G2-phase",
+                "(2) G1-phase",
+                "(3) Prophase",
+                "(4) S-phase"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 17,
+            "question": "Chromosomes are least condensed during:",
+            "options": [
+                "(1) Telophase",
+                "(2) Metaphase",
+                "(3) Interphase",
+                "(4) Anaphase"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 18,
+            "question": "Mature nerve cells cannot undergo cell division. These cells are probably considered in",
+            "options": [
+                "(1) G2-phase",
+                "(2) S-phase",
+                "(3) Mitosis",
+                "(4) G0-phase"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 19,
+            "question": "During cell cycle, RNA and protein synthesis takes place in",
+            "options": [
+                "(1) G1-phase",
+                "(2) Metaphase",
+                "(3) M-phase",
+                "(4) Cytokinesis"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 20,
+            "question": "Interphase is also known as ______ stage and it takes about ______% time of cell cycle:",
+            "options": [
+                "(1) Dividing, 95%",
+                "(2) Dividing, 80%",
+                "(3) Resting, 95%",
+                "(4) Resting, 80%"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 21,
+            "question": "Decision of G0-phase occurs",
+            "options": [
+                "(1) In G1-phase",
+                "(2) In G2-phase",
+                "(3) At the end of S-phase",
+                "(4) Towards the end of cytokinesis"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 22,
+            "question": "G2 phase is also called",
+            "options": [
+                "(1) Post-mitotic gap phase",
+                "(2) Synthetic phase",
+                "(3) Pre-mitotic gap phase",
+                "(4) Interkinesis"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 23,
+            "question": "Which pair of body cells lack cell division?",
+            "options": [
+                "(1) Skin epithelial cells and nephrons",
+                "(2) Nephrons and endothelial cells",
+                "(3) Gut lining cell and neurons",
+                "(4) Neurons and heart cells"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 24,
+            "question": "The stage between two M-phase is:",
+            "options": [
+                "(1) G1-phase",
+                "(2) S-phase",
+                "(3) G2-phase",
+                "(4) Interphase"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 25,
+            "question": "G1 stage of interphase of cell cycle shows",
+            "options": [
+                "(1) Active synthesis of DNA",
+                "(2) Active synthesis of RNA",
+                "(3) Active synthesis of protein",
+                "(4) Both (2) and (3)"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 26,
+            "question": "Cells which are not dividing are likely to be at:",
+            "options": [
+                "(1) G1 phase",
+                "(2) G2 phase",
+                "(3) G0 phase",
+                "(4) S-phase"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 27,
+            "question": "Select the correct statement about G1 phase:",
+            "options": [
+                "(1) Cell is metabolically inactive",
+                "(2) DNA in the cell does not replicate",
+                "(3) It is not a phase of synthesis of macromolecules",
+                "(4) Cell stops growing"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 28,
+            "question": "Choose the event of cell cycle which shows the importance of synapsis and the formation of chiasmata",
+            "options": [
+                "(1) An increase in the variation of progeny occurs",
+                "(2) Reciprocal exchange of chromosomal sections occurs",
+                "(3) The DNA on homologous chromosomes mix",
+                "(4) All of the above"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 29,
+            "question": "The stages through which a cell passes from one division to the next is called",
+            "options": [
+                "(1) Cell division",
+                "(2) Cell cycle",
+                "(3) Karyokinesis",
+                "(4) Cytokinesis"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 30,
+            "question": "End of prophase is marked by",
+            "options": [
+                "(1) Complete disintegration of plasma membrane",
+                "(2) Disappearance of ER, GB, nucleolus and nuclear envelope",
+                "(3) Initiation of condensation of chromosomal material",
+                "(4) Chromosomes align at the equatorial plate"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 31,
+            "question": "The completion of prophase can be marked by",
+            "options": [
+                "(1) Chromosomal material condenses to form compact mitotic chromosomes",
+                "(2) Initiation of condensation of chromosomal material",
+                "(3) Initiation of assembly of mitotic spindle",
+                "(4) Both (1) and (3)"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 32,
+            "question": "The centriole begins to move towards opposite poles of the cell in",
+            "options": [
+                "(1) Prophase",
+                "(2) Metaphase",
+                "(3) Anaphase",
+                "(4) Telophase"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 33,
+            "question": "By which stage, condensation of chromosomes is completed?",
+            "options": [
+                "(1) Prophase",
+                "(2) Metaphase",
+                "(3) Anaphase",
+                "(4) Telophase"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 34,
+            "question": "In mitosis the chromosomal elongation starts, nucleolus and the nuclear membrane reappear. This essential step happens in:",
+            "options": [
+                "(1) Telophase",
+                "(2) Interphase",
+                "(3) Metaphase",
+                "(4) S phase"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 35,
+            "question": "The plane of alignment of chromosomes at metaphase is referred to as",
+            "options": [
+                "(1) Cell furrow formation",
+                "(2) Chromosome alignment",
+                "(3) Metaphase plate",
+                "(4) All of the above"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 36,
+            "question": "What is the significance of mitosis?",
+            "options": [
+                "(1) Growth",
+                "(2) Repair",
+                "(3) Replacement",
+                "(4) All of the above"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 37,
+            "question": "In which stage of the cell division chromosomes are most condensed?",
+            "options": [
+                "(1) Prophase",
+                "(2) Metaphase",
+                "(3) Anaphase",
+                "(4) Telophase"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 38,
+            "question": "In mitosis, centromere splits during",
+            "options": [
+                "(1) Prophase",
+                "(2) Metaphase",
+                "(3) Anaphase",
+                "(4) Telophase"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 39,
+            "question": "How many generations of mitotic divisions are needed for a single cell to make 256 cells?",
+            "options": [
+                "(1) 8",
+                "(2) 16",
+                "(3) 32",
+                "(4) 64"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 40,
+            "question": "Chromosome exhibit high level of coiling at which phase of Karyokinesis?",
+            "options": [
+                "(1) Prophase",
+                "(2) Metaphase",
+                "(3) Telophase",
+                "(4) Interphase"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 41,
+            "question": "Karyokinesis differs from cytokinesis as is involves division of:",
+            "options": [
+                "(1) Cell",
+                "(2) Both nucleus and cytoplasm",
+                "(3) Nucleus",
+                "(4) Cytoplasm"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 42,
+            "question": "Centromere is required for",
+            "options": [
+                "(1) Movement of chromosomes towards poles",
+                "(2) Cytoplasmic cleavage",
+                "(3) Crossing over",
+                "(4) Transcription"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 43,
+            "question": "‘X’ is a phase of mitosis, in which the chromatin condenses into discrete chromosomes. During ‘X’ phase, nuclear envelope breaks down and spindle forms at opposite ends of cell. Identify ‘X’.",
+            "options": [
+                "(1) Interphase",
+                "(2) Anaphase",
+                "(3) Telophase",
+                "(4) Prophase"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 44,
+            "question": "Reason of chromosomal movement in Anaphase is",
+            "options": [
+                "(1) Astral rays",
+                "(2) Centrioles",
+                "(3) Kinetochore",
+                "(4) Kinetochore and spindle fibres"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 45,
+            "question": "Starting of metaphase is marked by",
+            "options": [
+                "(1) Complete disintegration of nuclear envelope",
+                "(2) Disappearance of ER, GB, nucleolus and nuclear envelope",
+                "(3) Initiation of condensation of chromosomal material",
+                "(4) Alignment of chromosomes at the equatorial plate"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 46,
+            "question": "Mitosis is characterised by:",
+            "options": [
+                "(1) Reduction division",
+                "(2) Equational division",
+                "(3) Both (1) and (2)",
+                "(4) Pairing of homologous chromosomes"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 47,
+            "question": "During mitosis, after the separation of centromeres, the chromatids move towards the opposite poles of the spindle. Name the term used for these chromatids.",
+            "options": [
+                "(1) Daughter chromosomes",
+                "(2) Kinetochores",
+                "(3) Half spindles",
+                "(4) Centrosomes"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 48,
+            "question": "In which stage of mitosis, the structure of chromosomes can be observed?",
+            "options": [
+                "(1) Prophase",
+                "(2) Metaphase",
+                "(3) Anaphase",
+                "(4) Telophase"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 49,
+            "question": "In telophase of mitosis, the mitotic spindle breaks down and nuclear membranes form. This is essentially the opposite of what happens in",
+            "options": [
+                "(1) Prophase",
+                "(2) Interphase",
+                "(3) Metaphase",
+                "(4) S phase"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 50,
+            "question": "A very significant contribution of mitosis is cell repair. Repairing takes place in our body in",
+            "options": [
+                "(1) Blood cells",
+                "(2) Upper layer of epidermis",
+                "(3) Cells of the lining of the gut",
+                "(4) All of the above"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 51,
+            "question": "The growth of multicellular organisms is due to",
+            "options": [
+                "(1) Meiosis 1",
+                "(2) Mitosis",
+                "(3) Meiosis II",
+                "(4) Both (1) and (3)"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 52,
+            "question": "What type of cell division occurs in the cells of the upper layer of the epidermis, cells of the lining of the gut, and blood cells?",
+            "options": [
+                "(1) Mitosis",
+                "(2) Meiosis I",
+                "(3) Meiosis II",
+                "(4) Both (2) and (3)"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 53,
+            "question": "Significance of mitosis involves",
+            "options": [
+                "(1) The growth of multicellular organism.",
+                "(2) Cell repair.",
+                "(3) Production of diploid daughter cells with identical genetic complement.",
+                "(4) All of the above"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 54,
+            "question": "Mitosis results in the production of",
+            "options": [
+                "(1) Genetically identical daughter cells",
+                "(2) Two diploid daughter cells",
+                "(3) Genetically different daughter cells",
+                "(4) Both (1) and (2)"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 55,
+            "question": "When synapsis is complete all along the chromosomes, the cell is said to have entered a stage called:",
+            "options": [
+                "(1) Diakinesis",
+                "(2) Pachytene",
+                "(3) Diplotene",
+                "(4) Zygotene"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 56,
+            "question": "Prophase-1 is subdivided into five phases based on",
+            "options": [
+                "(1) Chromosomal movement",
+                "(2) Chromosomal alignment",
+                "(3) Chromosomal behaviour",
+                "(4) Chromosomal structure"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 57,
+            "question": "The chiasmata is ______ structure.",
+            "options": [
+                "(1) C-shaped",
+                "(2) X-shaped",
+                "(3) Y-shaped",
+                "(4) U-shaped"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 58,
+            "question": "Tetrad is made up of:",
+            "options": [
+                "(1) Four homologous chromosomes with four chromatids",
+                "(2) Four non-homologous chromosomes",
+                "(3) Four non-homologous chromatids",
+                "(4) Two homologous chromosomes, each with two chromatids"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 59,
+            "question": "Electron micrographs of which stage indicate that chromosome synapsis is accompanied by the formation of complex structure called synaptonemal complex?",
+            "options": [
+                "(1) Zygotene",
+                "(2) Pachytene",
+                "(3) Diplotene",
+                "(4) Diakinesis"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 60,
+            "question": "What precedes reformation of nuclear envelope in M-phase?",
+            "options": [
+                "(1) Formation of contraction ring and transcription from chromosomes",
+                "(2) Transcription of chromosomes and reassembly of nuclear lamina",
+                "(3) Formation of phragmoplast and contraction ring",
+                "(4) Decondensation of chromosomes and appearance of nuclear lamina"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 61,
+            "question": "If one cell has twice as much DNA as another similar cell, it may be",
+            "options": [
+                "(1) Respiring",
+                "(2) Secreting",
+                "(3) Dividing",
+                "(4) Moving"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 62,
+            "question": "The four daughter cells produced at the end of meiosis are:",
+            "options": [
+                "(1) Genetically similar",
+                "(2) Genetically dissimilar",
+                "(3) Polynucleate",
+                "(4) Anucleate"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 63,
+            "question": "Non-sister chromatids exchange segments during",
+            "options": [
+                "(1) Leptotene",
+                "(2) Diplotene",
+                "(3) Zygotene",
+                "(4) Pachytene"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 64,
+            "question": "Which is unique to mitosis and does not occur in meiosis with identical genetic complement?",
+            "options": [
+                "(1) Homologous chromosomes cross over",
+                "(2) Homologous chromosomes pair and form bivalent",
+                "(3) The final products are two daughter cells",
+                "(4) Chromatids are separated during anaphase"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 65,
+            "question": "Microtubules from opposite poles of spindle get attached to kinetochores of sister chromatids during",
+            "options": [
+                "(1) Anaphase II",
+                "(2) Prophase II",
+                "(3) Metaphase II",
+                "(4) Metaphase I"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 66,
+            "question": "In meiosis, synapsis occurs during",
+            "options": [
+                "(1) S-phase",
+                "(2) Interphase",
+                "(3) Leptotene",
+                "(4) Prophase I"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 67,
+            "question": "Meiosis involves",
+            "options": [
+                "(1) Two nuclear divisions and one chromosomal division",
+                "(2) One nuclear division and one chromosomal division",
+                "(3) One nuclear division and two chromosomal divisions",
+                "(4) Two nuclear divisions and two chromosomal divisions"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 68,
+            "question": "In which stage, synaptonemal complex dissolves?",
+            "options": [
+                "(1) Zygotene",
+                "(3) Diplotene",
+                "(2) Pachytene",
+                "(4) Diakinesis"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 69,
+            "question": "At what stage does the number of chromosomes become half?",
+            "options": [
+                "(1) Prophase 1",
+                "(2) Metaphase I",
+                "(3) Anaphase I",
+                "(4) Telophase I"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 70,
+            "question": "Poleward movement of dyads occurs during",
+            "options": [
+                "(1) Anaphase",
+                "(2) Anaphase 1",
+                "(3) Anaphase II",
+                "(4) Telophase"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 71,
+            "question": "In which stage, the chromosomes clearly appear under the light microscope?",
+            "options": [
+                "(1) Zygotene",
+                "(2) Leptotene",
+                "(3) Pachytene",
+                "(4) Prophase II"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 72,
+            "question": "When are chromatids/chromosomes of tetrad clearly visible in meiosis?",
+            "options": [
+                "(1) Zygotene",
+                "(2) Diplotene",
+                "(3) Pachytene",
+                "(4) Diakinesis"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 73,
+            "question": "Which of the following cellular structures always disappears during mitosis and meiosis?",
+            "options": [
+                "(1) Plastid and nuclear membrane",
+                "(2) Nucleolus and nuclear membrane",
+                "(3) Endoplasmic reticulum and mitochondria",
+                "(4) Endoplasmic reticulum and plasma membrane"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 74,
+            "question": "Second division of meiosis is",
+            "options": [
+                "(1) Reductional division",
+                "(2) Multiplied division",
+                "(3) Equational division",
+                "(4) None of the above"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 75,
+            "question": "Gap between meiosis-I and meiosis-II is called",
+            "options": [
+                "(1) Interphase",
+                "(2) Interkinesis",
+                "(3) Diakinesis",
+                "(4) Metakinesis"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 76,
+            "question": "Slipping of chiasmata towards the ends of bivalent is called",
+            "options": [
+                "(1) Terminalisation",
+                "(2) Diakinesis",
+                "(3) Interkinesis",
+                "(4) None of the above"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 77,
+            "question": "After meiosis -I, the two chromatids of a chromosome are",
+            "options": [
+                "(1) Genetically similar",
+                "(2) Genetically different",
+                "(3) There occurs only one chromatid in each chromosome",
+                "(4) None of the above"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 78,
+            "question": "Among the following which one is generally the longest phase in prophase of meiosis?",
+            "options": [
+                "(1) Leptotene",
+                "(2) Zygotene",
+                "(3) Pachytene",
+                "(4) Diplotene"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 79,
+            "question": "During pachytene stage of meiosis, the chromosomes appear",
+            "options": [
+                "(1) Single stranded",
+                "(2) Four stranded",
+                "(3) Six stranded",
+                "(4) Eight stranded"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 80,
+            "question": "During the first metaphase of meiosis, the centromeres",
+            "options": [
+                "(1) Undergo division",
+                "(2) Do not divide",
+                "(3) Divide but do not separate",
+                "(4) None of the above"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 81,
+            "question": "Which of the following does not occur in Anaphase I?",
+            "options": [
+                "(1) Segregation of homologous chromosomes",
+                "(2) Contraction in spindle",
+                "(3) Poleward movement of chromosomes",
+                "(4) Division of centromere"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 82,
+            "question": "82 . The homologous chromosomes separate, while sister chromatid remain associated at their centromeres at",
+            "options": [
+                "(1) Metaphase-I of meiosis",
+                "(2) Anaphase-I of meiosis",
+                "(3) Metaphase of mitosis",
+                "(4) Anaphase of mitosis"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 83,
+            "question": "A bivalent of meiosis I consists of",
+            "options": [
+                "(1) Four chromatids and two centromeres",
+                "(2) Two chromatids and one centromere",
+                "(3) Two chromatids and two centromeres",
+                "(4) Four chromatids and four centromeres"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 84,
+            "question": "During Anaphase-I of meiosis:",
+            "options": [
+                "(1) Homologous chromosomes separate",
+                "(2) Non-homologous chromosomes separate",
+                "(3) Sister chromatids separate",
+                "(4) Non-sister chromatids undergo crossing over"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 85,
+            "question": "At what phase of meiosis are there two cells, each with sister chromatids aligned at the spindle equator?",
+            "options": [
+                "(1) Anaphase II",
+                "(2) Metaphase II",
+                "(3) Metaphase 1",
+                "(4) Anaphase"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 86,
+            "question": "Meiosis occurs in organisms during:",
+            "options": [
+                "(1) Sexual reproduction",
+                "(2) Vegetative reproduction",
+                "(3) Both (1) and (2)",
+                "(4) None of these"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 87,
+            "question": "Which of the event(s) restore the normal number of chromosomes in life cycle of a sexually reproducing diploid organism?",
+            "options": [
+                "(1) Mitosis and Meiosis",
+                "(2) Meiosis and fertilisation",
+                "(3) Fertilisation and mitosis",
+                "(4) Only"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 88,
+            "question": "Meiotic cell division is also termed as reduction division",
+            "options": [
+                "(1) Involvement of gametes",
+                "(2) Doubling of chromosomes",
+                "(3) Elimination of chromosomes",
+                "(4) Number of chromosomes become halved"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 89,
+            "question": "Which one ensures maintenance of chromosome number generation after generation in sexually reproducing organisms?",
+            "options": [
+                "(1) Mitosis",
+                "(2) Meiosis",
+                "(3) Parthenogenesis",
+                "(4) Metamorphosis"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 90,
+            "question": "Genetic recombination is due to",
+            "options": [
+                "(1) Meiosis",
+                "(2) Mitosis",
+                "(3) Fertilisation",
+                "(4) None of the above"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 91,
+            "question": "Meiosis is evolutionary significant because it results in",
+            "options": [
+                "(1) Genetically similar daughters",
+                "(2) Four daughter cells",
+                "(3) Eggs and sperms",
+                "(4) Recombinations"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 92,
+            "question": "Meiosis in diploid organisms results in:",
+            "options": [
+                "(1) Production of gametes",
+                "(2) Reduction in the number of chromosomes",
+                "(3) Introduction of variation",
+                "(4) All of the above"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        }
+    ]
+}

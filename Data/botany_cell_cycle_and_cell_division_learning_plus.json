@@ -1,0 +1,306 @@
+{
+    "subject": "botany",
+    "chapter": "cell_cycle_and_cell_division",
+    "level": "learning_plus",
+    "questions": [
+        {
+            "id": 1,
+            "question": "How many chromosomes will the cell have at G, after S and after M-phase respectively if it has 14 chromosomes?",
+            "options": [
+                "(1) 7, 14, 14",
+                "(2) 14, 14, 14",
+                "(3) 14, 14, 7",
+                "(4) 7,7,7"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 2,
+            "question": "The M phase starts with the nuclear division, corresponding to the separation of daughter chromosomes called ...A... and usually ends with division of cytoplasm, called ...B...",
+            "options": [
+                "(1) A-Cytokinesis, B-Karyokinesis",
+                "(2) A-Interkinesis, B-Cytokinesis",
+                "(3) A-Karyokinesis, B-Cytokinesis",
+                "(4) A-Interkinesis, B-Karyokinesis"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 3,
+            "question": "Read the following statements and find out the incorrect statement.",
+            "options": [
+                "(1) In an animal cell, cytokinesis is achieved by the appearance of a furrow in the plasma membrane.",
+                "(2) In an animal cell, furrow formation starts in the centre of cell and grows outward to meet the existing lateral walls.",
+                "(3) Cell plate represents the middle lamella between the walls of two adjacent plant cells.",
+                "(4) During cytokinesis, organelles like mitochondria and plastids get distributed between the two daughter cells."
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 4,
+            "question": "In some organisms, such as certain fungi and algae, cells undergo mitosis repeatedly without subsequently undergoing cytokinesis. What would result from this?",
+            "options": [
+                "(1) A decrease in chromosome number",
+                "(2) Inability to duplicate DNA",
+                "(3) Division of the organism into many cells, most lacking nuclei",
+                "(4) Large cells containing many nuclei"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 5,
+            "question": "If you are provided with root-tips of onion in your class and are asked to count the choromosomes, which of the following stages can you most conveniently look into?",
+            "options": [
+                "(1) Telophase",
+                "(2) Anaphase",
+                "(3) Prophase",
+                "(4) Metaphase"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 6,
+            "question": "The two chromatids of a mitotic metaphase chromosome shows",
+            "options": [
+                "(1) Replicated chromosomes to be separated at anaphase",
+                "(2) Homologous chromosomes of a haploid set",
+                "(3) Non-homologous chromosomes joined at the centromere",
+                "(4) Maternal and paternal chromosomes joined at the centromere"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 7,
+            "question": "Which of the following is true for the mitotic spindle?",
+            "options": [
+                "(1) It is composed of actin and myosin microfilaments.",
+                "(2) It is composed of kinetochores at the metaphase plate.",
+                "(3) It is composed of microtubules, which help in separating the chromosomes to opposite poles of he cell.",
+                "(4) None of the above"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 8,
+            "question": "During which stages (or prophase I substages) of meiosis, do you expect to find the bivalents formation and DNA replication respectively?",
+            "options": [
+                "(1) Pachytene and interphase (between two meiotic divisions)",
+                "(2) Pachytene and interphase (just prior to prophase I)",
+                "(3) Leptotene and S phase (of interphase just prior to prophase I)",
+                "(4) Zygotene and S phase (of interphase prior to prophase I)"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 9,
+            "question": "Identify the wrong statement about meiosis:",
+            "options": [
+                "(1) Pairing of homologous chromosomes occurs",
+                "(2) Four haploid cells are formed",
+                "(3) At the end of meiosis, the number of chromosomes are reduced to half",
+                "(4) Two cycles of DNA replication occur"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 10,
+            "question": "If the number of bivalents are 8 in metaphase - I, what shall be the number of chromosomes in daughter cells after meiosis -I and meiosis - II respectively?",
+            "options": [
+                "(1) 8 and 4",
+                "(2) 4 and 4",
+                "(3) 8 and 8",
+                "(4) 16 and 8"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 11,
+            "question": "A cell divides every one minute. At this rate of division it can fill a 100 mL of beaker in one hour. How much time does it take to fill a 50 mL beaker?",
+            "options": [
+                "(1) 30 minutes",
+                "(2) 60 minutes",
+                "(3) 59 minutes",
+                "(4) 32 minutes"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 12,
+            "question": "How many of the following events, belong to S-phase of cell cycle?<br>",
+            "options": [
+                "(1) None",
+                "(2) One",
+                "(3) Two",
+                "(4) Three"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 13,
+            "question": "A human bone marrow cell, in prophase of mitosis, contains 46 chromosomes. How many chromatids does it contain altogether?",
+            "options": [
+                "(1) 46",
+                "(2) 92",
+                "(3) 23",
+                "(4) 23 or 46, depending when during prophase you look"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 14,
+            "question": "The absence of centrioles from higher plant cells means that during somatic cell nuclear division, there is:",
+            "options": [
+                "(1) No apparent organisation of mitotic spindles.",
+                "(2) No equatorial arrangement of chromosomes at metaphase.",
+                "(3) No new cell wall laid down at telophase.",
+                "(4) No spindle formed."
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 15,
+            "question": "'X' ensures the production of 'Y' phase in the life cycle of sexually reproducing organisms whereas fertilization restores the 'Z' phase. Identify X, Y and Z.",
+            "options": [
+                "(1) X-Mitosis, Y haploid, Z - haploid",
+                "(2) X-Mitosis, Y diploid, Z-diploid",
+                "(3) X-Meiosis, Y haploid, Z-diploid",
+                "(4) X- Meiosis, Y diploid, Z-diploid"
+            ],
+            "answer": 3,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 16,
+            "question": "Which statement is true for mitosis?",
+            "options": [
+                "(1) Daughter cells exhibit division of labour, i.e., perform different functions",
+                "(2) Daughter cells are exactly similar in all respect",
+                "(3) Daughter cells have half the number of chromosomes as compared to mother cell",
+                "(4) Daughter cells have differences in genetic characters"
+            ],
+            "answer": 2,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 17,
+            "question": "Which one of the following statements that contrasts mitosis and meiosis is correct?",
+            "options": [
+                "(1) Cell divides by cytokinesis only in mitosis",
+                "(2) DNA is replicated before the start of meiosis only",
+                "(3) Spindles consisting of microtubule form only in mitosis",
+                "(4) Exchange of genetic material occurs only in meiosis"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 18,
+            "question": "Which one of the following options contain the correct order of meiotic events?",
+            "options": [
+                "(1) Separation of sister chromatids, recombination, formation of the synaptonemal complex, separation of homologous chromosomes",
+                "(2) Separation of homologous chromosomes, formation of the synaptonemal complex, recombination, separation of sister chromatids",
+                "(3) Formation of synaptonemal complex, recombination, separation of sister chromatids, separation of homologous chromosomes",
+                "(4) Formation of the synaptonemal complex, recombination, separation of homologous chromosomes, separation of sister chromatids."
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 19,
+            "question": "If a grasshopper cell contained 200 units of DNA during G. What would be the quantity of DNA in one of the 4 grasshopper cells at the end of telophase II of meiosis?",
+            "options": [
+                "(1) 50 units",
+                "(2) 100 units",
+                "(3) Between 50 and 100 units",
+                "(4) 200 units"
+            ],
+            "answer": 1,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 20,
+            "question": "A zoologist examined an intestine cell from a crayfish and counted 200 chromosomes, each consists of 2 chromatids, at metaphase of mitosis. What would he expect to see in each of the four cells at telophase II of meiosis if he looked in the crayfish ovary?",
+            "options": [
+                "(1) 50 chromosomes, each consisting of 2 chromatids",
+                "(2) 50 chromosomes, each consisting of 1 chromatid",
+                "(3) 100 chromosomes, each consisting of 2 chromatids",
+                "(4) 100 chromosomes, each consisting of 1 chromatid"
+            ],
+            "answer": 4,
+            "images": [],
+            "tables": []
+        },
+        {
+            "id": 21,
+            "question": "Identify A, B, C and D in diagram depicting cell cycle 1- correctly.",
+            "options": [
+                "(1) G0 G1  S G2",
+                "(2) G0 G1 G2 S",
+                "(3)  S G1 G0 G2",
+                "(4) G2  S G1 G0"
+            ],
+            "answer": 1,
+            "images": ["d21.jpg"],
+            "tables": []
+        },
+        {
+            "id": 22,
+            "question": "A, B and C are three stages in the meiosis-I as given in diagrams:The correct sequence of events is",
+            "options": [
+                "(1) A→C→B",
+                "(2) A→B→C",
+                "(3) C→A→B",
+                "(4) C→B→A"
+            ],
+            "answer": 3,
+            "images": ["d22.jpg"],
+            "tables": []
+        },
+        {
+            "id": 23,
+            "question": "X, Y and Z are three stages of cell division in meiosis. Choose the option with their correct identification:",
+            "options": [
+                "(1) Metaphase-II Anaphase-II Prophase-II",
+                "(2) Prophase-II  Anaphase-I  Prophase-I",
+                "(3) Metaphase-I  Anaphase-I  Anaphase-II",
+                "(4) Prophase-II  Anaphase-II Prophase-I"
+            ],
+            "answer": 2,
+            "images": ["d23.jpg"],
+            "tables": []
+        }
+    ]
+}

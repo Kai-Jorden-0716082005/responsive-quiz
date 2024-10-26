@@ -1,0 +1,45 @@
+{
+    "subjects": [
+        "Select Subject",
+        "botany",
+        "zoology",
+        "physics",
+        "chemistry"
+    ],
+    "levels":[
+        "Select Level",
+        "Topicwise",
+        "Learning Plus",
+        "Multi concepts",
+        "PYQs"
+    ],
+    "botany":[
+        "Cell Cycle and Cell Division",
+        "Cell The Unit of Life",
+        "Biological Classification",
+        "Plant Kingdom",
+        "The Living World",
+        "Morphology of Flowering Plants"
+    ],
+    "zoology":[
+        "Animal Kingdom",
+        "Structural Organisation in Animals",
+        "Human Physiology",
+        "Reproduction",
+        "Evolution"
+    ],
+    "physics":[
+        "Physical World",
+        "Units and Measurements",
+        "Motion in a Straight Line",
+        "Laws of Motion",
+        "Gravitation"
+    ],
+    "chemistry":[
+        "Some Basic Concepts of Chemistry",
+        "Structure of Atom",
+        "Classification of Elements",
+        "Chemical Bonding",
+        "Thermodynamics"
+    ]
+}
